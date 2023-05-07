@@ -10,10 +10,11 @@ include "funciones.php";
 $servername = 'localhost';
 $username = 'root';
 $password = '';
-$dbname = 'juegos';
-
+$dbname = 'registro_de_juegos';
 
 $conexion = mysqli_connect($servername, $username, $password, $dbname);
+
+
 
 if (!$conexion) {
     die("Conexión fallida: " . mysqli_connect_error());
@@ -23,9 +24,7 @@ echo "Conexión exitosa";
 
 
 
-
-
-if($_SERVER["REQUEST_METHOD"] == "GET"){
+/*if($_SERVER["REQUEST_METHOD"] == "GET"){
     $nombre_juego = $_GET["nombre_juego"];
     $año_publicacion = $_GET["año_publicacion"];
     $desarrollador = $_GET["desarrollador"];
@@ -35,8 +34,19 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
     $pais = $_GET['pais'];
     $nota = $_GET['nota'];
     $area = $_GET['area'];
-	
-	
+}*/
+
+
+if($_SERVER["REQUEST_METHOD"] == "GET"){
+    $nombre_juego = isset($_GET["nombre_juego"]) ? $_GET["nombre_juego"] : "";
+    $año_publicacion = isset($_GET["año_publicacion"]) ? $_GET["año_publicacion"] : "";
+    $desarrollador = isset($_GET["desarrollador"]) ? $_GET["desarrollador"] : "";
+    $director = isset($_GET["director"]) ? $_GET["director"] : "";
+    $distribuidora = isset($_GET["distribuidora"]) ? $_GET["distribuidora"] : "";
+    $guionista = isset($_GET['guionista']) ? $_GET['guionista'] : "";
+    $pais = isset($_GET['pais']) ? $_GET['pais'] : "";
+    $nota = isset($_GET['nota']) ? $_GET['nota'] : "";
+    $area = isset($_GET['area']) ? $_GET['area'] : "";
 }
 
 

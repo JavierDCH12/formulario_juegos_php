@@ -217,7 +217,7 @@ body {
   <!--Iniciamos el formulario de registro del juego-->
     
 
-  <form name="formulario_juego" action="enviar_formulario_ejercicio.php" method="GET">
+  <form name="formulario_juego" action="enviar.php" method="GET">
     <h1>Mejores juegos</h1>
     
     <label for="nombre_juego">Nombre del juego:
@@ -271,7 +271,7 @@ body {
   
     <div id="botones">
       <label for="enviar">
-        <input type="submit" value="Enviar" name="submit" id="enviar">
+        <input type="submit" value="Enviar" name="enviar" id="enviar">
       </label>
     
         <label for="reset">

@@ -1,3 +1,109 @@
+<!--PHP Script added-->
+
+<?php
+
+
+include "funciones.php";
+
+
+//Hacemos la conexion con la Base de Datos 'juegos'
+$servername = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'juegos';
+
+
+$conexion = mysqli_connect($servername, $username, $password, $dbname);
+
+if (!$conexion) {
+    die("Conexión fallida: " . mysqli_connect_error());
+}
+echo "Conexión exitosa";
+
+
+
+
+
+
+if($_SERVER["REQUEST_METHOD"] == "GET"){
+    $nombre_juego = $_GET["nombre_juego"];
+    $año_publicacion = $_GET["año_publicacion"];
+    $desarrollador = $_GET["desarrollador"];
+    $director = $_GET["director"];
+    $distribuidora = $_GET["distribuidora"];
+    $guionista = $_GET['guionista'];
+    $pais = $_GET['pais'];
+    $nota = $_GET['nota'];
+    $area = $_GET['area'];
+	
+	
+}
+
+
+if(isset($_GET['enviar']) && $_SERVER["REQUEST_METHOD"] == "GET"){
+	$nombre_juego = filtrar($_GET["nombre_juego"]);
+	$año_publicacion = filtrar($_GET["año_publicacion"]);
+	$desarrollador = filtrar($_GET["desarrollador"]);
+	$director = filtrar($_GET["director"]);
+	$distribuidora = filtrar($_GET["distribuidora"]);
+	$guionista = filtrar($_GET["guionista"]);
+	$pais = filtrar($_GET["pais"]);
+	$nota = filtrar($_GET["nota"]);
+	$area = filtrar($_GET["area"]);
+}
+
+
+
+
+$sql = " INSERT INTO juegos (nombre_juego, año_publicacion, desarrollador, director, distribuidora, guionista, pais, nota, area) 
+VALUES ('$nombre_juego', '$año_publicacion', '$desarrollador', '$director', '$distribuidora', '$guionista', '$pais', '$nota', '$area')";
+
+
+if (mysqli_query($conexion, $sql)) {
+  echo "Los datos se han insertado correctamente";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conexion);
+}
+
+if(isset($_GET["enviar"]) && $_SERVER["REQUEST_METHOD"] == "GET"){
+    if(empty($_GET["nombre_juego"])){
+        $lista_errores[] = "El nombre del juego es obligatorio";
+    }
+	if(empty($_GET["año_publicacion"])){
+        $lista_errores[] = "El año de publicación es obligatorio";
+    }
+	if(empty($_GET["desarrollador"])){
+        $lista_errores[] = "El nombre del desarrollador es obligatorio";
+    }
+	if(empty($_GET["director"])){
+        $lista_errores[] = "El nombre del director es obligatorio";
+    }
+	if(empty($_GET["distribuidora"])){
+        $lista_errores[] = "El nombre de la distribuidora obligatorio";
+    }
+	if(empty($_GET["guionista"])){
+        $lista_errores[] = "El nombre del guionista es obligatorio";
+    }
+	if(empty($_GET["pais"])){
+        $lista_errores[] = "El pais es obligatorio";
+    }
+	if(empty($_GET["nota"])){
+        $lista_errores[] = "La nota es obligatoria";
+    }
+	
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html>

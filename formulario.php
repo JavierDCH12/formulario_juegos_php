@@ -4,7 +4,7 @@
     <title>Formulario Juegos</title>
 
     <link rel="stylesheet" type="text/css" href="./estilos_formulario.css">
-    <link rel="icon" type="image/jpg" href="./assets/icons8-nintendo-gamecube-controller-96.png"/>
+    <link rel="icon" type="image/jpg" href="imges/nintendodos.png"/>
     
 
 
@@ -208,7 +208,7 @@ body {
 <div id="contenido">
 
   <div class="image-container">
-    <img src="./assets/icons8-nintendo-gamecube-controller-96.png" alt="Imagen animada">
+    <img src="imges/nintendodos.png" alt="Imagen animada">
   </div>
 
 

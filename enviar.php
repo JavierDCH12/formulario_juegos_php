@@ -70,7 +70,7 @@ VALUES ('$nombre_juego', '$año_publicacion', '$desarrollador', '$director', '$d
 
 
 if (mysqli_query($conexion, $sql)) {
-  echo "Los datos se han insertado correctamente";
+  echo "\nLos datos se han insertado correctamente";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conexion);
 }

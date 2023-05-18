@@ -35,10 +35,7 @@ body {
 
 
 
-  h1{
-    font-size:50px;
-    margin-left:53px;
-}
+ 
 
 
 
@@ -217,25 +214,88 @@ body {
     margin-left:100px;
   }
 
-  #lateral{
-    width:275px;
-    background-color: white;
-    height: 300px;
-    margin-right:100px;
-    margin-top:100px;
-    margin-left:-277px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    text-align: center;
+
+  .card {
+  width: 275px;
+  height: 250px;
+  perspective: 1000px;
+  margin-top: 100px;
+  margin-right:100px;
+  margin-left:-277px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  position: sticky;
+  top:50px;
+
+
 }
 
-#explicacion{
-  padding-left: 5px;
-  padding-right: 5px;
+.explicacion{
+  padding-left:12px;
+  padding-right:12px;
+  font-size:15px;
+  text-align: justify;
+  padding-top:24px;
 
 }
+
+.titulo_card{
+  padding-top:25px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  cursor:pointer;
+  
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.front {
+  background-color: #f1f1f1;
+}
+
+.back {
+  background-color: #333;
+  transform: rotateY(180deg);
+  color:white;
+}
+
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+#titulo{
+  font-size:50px;
+  margin-left:53px;
+  letter-spacing: 2px;
+
+}
+
+
+
+
 
   
+
+
 
     </style>
 
@@ -258,7 +318,7 @@ body {
     
 
   <form name="formulario_juego" action="enviar.php" method="GET">
-    <h1>Mejores juegos</h1>
+    <h1 id="titulo">Mejores juegos</h1>
     
     <label for="nombre_juego" class="tag">Nombre del juego:
       <input type="text" name="nombre_juego" id="nombre_juego" required>
@@ -278,12 +338,9 @@ body {
     </label>
   
     <label for="distribuidora" class="tag">
-      Distribuidora: <input type="text" name="distribuidora" id="distribuidora"  pattern="[a-zA-Z ]+">
+      Compañia distribuidora: <input type="text" name="distribuidora" id="distribuidora"  pattern="[a-zA-Z ]+">
     </label>
   
-    <label for="guionista" class="tag">
-      Guionista: <input type="text" name="guionista" id="guionista"  pattern="[a-zA-Z ]+">
-    </label>
   
     <label for="pais" class="tag"> País de origen
       <select name="pais" >
@@ -332,17 +389,25 @@ body {
   </div>
 
 
-  <aside id="lateral">
-    <h3>Registro de juegos</h3>
-
-
-    <div id="explicacion">
-      <p>Este proyecto es un formulario realizado con HTML5 y CSS, conectad a una Base de datos mediante PHP</p>
-      <p>El objetivo es poder, conectado con la BD en PHPMyaAdmin, registrar, modificar y eliminar, en este caso, videojuegos al ser esa la temática del proyecto.</p>
-
+  <div class="card">
+  <div class="card-inner">
+    <div class="front">
+      <h3 class="titulo_card">Registro de Juegos</h3>
+      <p class="explicacion">Este proyecto es un formulario realizado con HTML5 y CSS, conectando a una Base de Datos mediante PHP.</p>
+      
     </div>
+    <div class="back">
+      <h3 class="titulo_card">Registro de Juegos</h3>
+      <p class="explicacion">El objetivo es, conectado con esa BdD en PhpMyAdmin, registrar, modificar 
+        y eliminar, en este caso, videojuegos, al ser esa la temática del proyecto.</p>
+    </div>
+  </div>
+</div>
 
-  </aside>
+  
+
+
+  
 
 
 

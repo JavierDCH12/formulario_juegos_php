@@ -10,8 +10,9 @@
 
     <style>
       
-body {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 3%, rgba(0,212,255,1) 49%, rgba(9,9,121,1) 88%);
+ body {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 9%, rgba(75,75,75,1) 85%, rgba(107,107,107,1) 96%);
     color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -378,7 +379,7 @@ a{
   <!--Iniciamos el formulario de registro del juego-->
     
 
-  <form name="formulario_juego" action="enviar.php" method="GET">
+  <form name="formulario_juego" action="varios.php" method="GET">
     <h1 id="titulo">Mejores juegos</h1>
     
     <label for="nombre_juego" class="tag">Nombre del juego:
@@ -430,15 +431,15 @@ a{
     <div id="botones">
       
       <label for="enviar">
-        <input type="submit" value="Enviar" name="enviar" id="enviar">
+        <input type="submit" value="enviar" name="submit" id="enviar">Enviar
       </label>
 
       <label for="eliminar">
-      <input type="submit" value="Eliminar" name="eliminar" id="eliminar">
+      <input type="submit" value="eliminar" name="submit" id="eliminar">Eliminar
     </label>
 
       <label for="modificar">
-      <input type="submit" value="Modificar" name="modificar" id="modificar">
+      <input type="submit" value="modificar" name="submit" id="modificar">Modificar
     </label>
     
         <label for="reset">
@@ -471,7 +472,7 @@ a{
   <form action="busqueda.php" method="POST">
     <h3 class="titulo_busq_card">Búsqueda</h3>
     <label for="busqueda">
-      <input type="text" name="busqueda" placeholder="Nombre del juego..." id="input_busq" required>
+      <input type="text" name="busqueda" placeholder="Nombre del juego..." id="input_busq" >
     </label>
     <label for="enviar_busq">
       <input type="submit" value="Buscar" name="enviar_busq" id="enviar_busq">

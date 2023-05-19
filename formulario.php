@@ -431,15 +431,15 @@ a{
     <div id="botones">
       
       <label for="enviar">
-        <input type="submit" value="enviar" name="submit" id="enviar">Enviar
+        <input type="submit" value="Enviar" name="submit" id="enviar">
       </label>
 
       <label for="eliminar">
-      <input type="submit" value="eliminar" name="submit" id="eliminar">Eliminar
+      <input type="submit" value="Eliminar" name="submit" id="eliminar">
     </label>
 
       <label for="modificar">
-      <input type="submit" value="modificar" name="submit" id="modificar">Modificar
+      <input type="submit" value="Modificar" name="submit" id="modificar">
     </label>
     
         <label for="reset">

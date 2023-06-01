@@ -115,7 +115,7 @@ if (isset($_GET["submit"])) {
 	</style>
 
 
-	</style>
+	
 	
 	
 	

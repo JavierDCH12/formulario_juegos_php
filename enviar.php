@@ -1,9 +1,4 @@
 <?php
-
-
-
-
-	
         //Aplicamos una operación ternaria para en una sola linea confrontar la condicion de existencia de las variables
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $nombre_juego = isset($_GET["nombre_juego"]) ? filtrar($_GET["nombre_juego"]) : "";
@@ -27,8 +22,5 @@
         } else {
             echo "Error al insertar datos: " . mysqli_error($conexion);
         }
-
-      
-     
 
 ?>

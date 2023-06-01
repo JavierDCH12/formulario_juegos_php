@@ -243,6 +243,7 @@
 
 .titulo_card{
   padding-top:25px;
+  font-size: 23px;
 }
 
 .card-inner {
@@ -284,7 +285,7 @@
 }
 
 #titulo{
-  font-size:50px;
+  font-size:43px;
   margin-left:53px;
   letter-spacing: 2px;
 
@@ -303,6 +304,7 @@
   position: sticky;
   top:350px;
   background-color: white;
+  visibility: hidden;
 }
 
 .card_dos:hover{
@@ -370,7 +372,7 @@ a{
 <div id="contenido">
 
   <div class="image-container">
-    <img src="imges/nintendodos.png" alt="Imagen animada">
+    <img src="./nintendo.png" alt="Imagen animada">
   </div>
 
 
@@ -380,10 +382,10 @@ a{
     
 
   <form name="formulario_juego" action="varios.php" method="GET">
-    <h1 id="titulo">Mejores juegos</h1>
+    <h1 id="titulo">Registro de juegos</h1>
     
     <label for="nombre_juego" class="tag">Nombre del juego:
-      <input type="text" name="nombre_juego" id="nombre_juego" >
+      <input type="text" name="nombre_juego" id="nombre_juego" required >
     </label>
   
   
@@ -409,7 +411,7 @@ a{
   
         <option value="" disabled>--</option>
         <option value="Japón">Japón</option>
-        <option value="Estsdos Unidos">Estados Unidos</option>
+        <option value="Estados Unidos">Estados Unidos</option>
         <option value="Reino Unido">Reino Unido</option>
         <option value="Corea del Sur">Corea del Sur</option>
         <option value="China">China</option>
@@ -454,14 +456,14 @@ a{
   <div class="card">
   <div class="card-inner">
     <div class="front">
-      <h3 class="titulo_card">Registro de Juegos</h3>
-      <p class="explicacion">Este proyecto es un formulario realizado con HTML5 y CSS, conectando a una Base de Datos mediante PHP.</p>
+      <h3 class="titulo_card">¿Qué es?</h3>
+      <p class="explicacion">Este proyecto, llamado 'Registro de Juegos', es un formulario realizado con HTML5 y CSS, conectado a una Base de Datos mediante PHP.</p>
       
     </div>
     <div class="back">
-      <h3 class="titulo_card">Registro de Juegos</h3>
-      <p class="explicacion">El objetivo es, conectado con esa BdD en PhpMyAdmin, registrar, modificar 
-        y eliminar, en este caso, videojuegos, al ser esa la temática del proyecto.</p>
+      <h3 class="titulo_card">Finalidad del Proyecto</h3>
+      <p class="explicacion">El objetivo es registrar, modificar 
+        y eliminar, en este caso, videojuegos, al ser esa la temática del proyecto, tras realizar una conexión con una BdD en PhpMyAdmin. </p>
     </div>
   </div>
 </div>

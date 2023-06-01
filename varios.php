@@ -1,4 +1,12 @@
 <!--PHP Script added-->
+<!--
+  Developer: Javier Delgado
+  Date: 2023/06/01
+  Location: Caceres, spacing
+  Proyect: Game Register
+-->
+
+
 <?php
 include "funciones.php";
 include "conexion.php";
@@ -124,12 +132,14 @@ if (isset($_GET["submit"])) {
 
 	<div class="container">
 
+	<!--Los estilos CSS cambian según el boton clicado en el formulario principal-->
+
 		<?php if ($submit === "Enviar") : ?>
-			<div class="band-enviar">Se ha enviado el registro con éxito</div>
+			<div class="band-enviar">El registro se ha enviado con éxito</div>
 		<?php elseif ($submit === "Eliminar") : ?>
-			<div class="band-eliminar">Se ha eliminado el registro con éxito</div>
+			<div class="band-eliminar">El registro se ha eliminado con éxito</div>
 		<?php elseif ($submit === "Modificar") : ?>
-			<div class="band-modificar">Se ha modificado el registro con éxito</div>
+			<div class="band-modificar">El registro se ha modificado con éxito</div>
 		<?php endif; ?>
 	 
 		<p><span>&#128281;</span><a href="formulario.php">Volver al formulario</a></p>

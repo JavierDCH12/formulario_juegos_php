@@ -1,7 +1,10 @@
 
 <?php
 
-
+    //Developer: Javier Delgado
+  //Date: 2023/06/01
+  //Location: Caceres, spacing
+  //Proyect: Game Register
 
 // Hacemos la conexión con la base de datos 'registro_de_juegos'
 $servername = 'localhost';

@@ -1,4 +1,14 @@
+
 <!DOCTYPE html>
+
+<!--
+  Developer: Javier Delgado
+  Date: 2023/06/01
+  Location: Caceres, spacing
+  Proyect: Game Register
+-->
+
+
 <html>
   <head>
     <title>Formulario Juegos</title>
@@ -451,6 +461,8 @@ a{
     </div>
 
   </div>
+
+  <!--Estructura HTML de la tarjeta rotatoria-->
 
 
   <div class="card">

@@ -1,7 +1,10 @@
 <?php
 
 
-
+    //Developer: Javier Delgado
+    //Date: 2023/06/01
+   //Location: Caceres, spacing
+   //Proyect: Game Register
 
 
 

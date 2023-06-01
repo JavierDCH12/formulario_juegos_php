@@ -1,15 +1,20 @@
 <?php
 
+  //Developer: Javier Delgado
+  //Date: 2023/06/01
+  //Location: Caceres, spacing
+  //Proyect: Game Register
 
-// Obtain the game name
+
+
+// Obtenemos el nombre del juego que vmos a borra
 $nombre_juego = isset($_GET["nombre_juego"]) ? filtrar($_GET["nombre_juego"]) : "";
 
-// Verify that a valid game name is provided
+// Verificamos si el nombre del juego es diferente a vacio
 if ($nombre_juego !== "") {
-    // Construct the SQL query to delete the game by name
+    // Creamos la sentncia SQL y la ejecutamos
     $sql = "DELETE FROM juegos WHERE nombre_juego='$nombre_juego'";
 
-    // Execute the SQL query
     if (mysqli_query($conexion, $sql)) {
         echo "El juego se ha eliminado correctamente";
     } else {
